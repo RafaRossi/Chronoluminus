@@ -1,88 +1,99 @@
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using Ink.Runtime;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace DialogueSystem
 {
     public class DialogueController : MonoBehaviour
     {
+        [SerializeField] private TextAsset inkJson;
+        [SerializeField] private DialogueBoxView boxView;
+        [SerializeField] private ChoiceView choiceView;
+        [SerializeField] private DialogueEffects effects;
         [SerializeField] private InputActionReference advanceAction;
         
-        [SerializeField] private DialogueBoxView boxView;
+        [SerializeField] private DialogueBoxStyle defaultStyle;
+
+        [SerializeField] private UnityEvent onStartTyping = new();
+        [SerializeField] private UnityEvent onEndTyping = new();
         
-        private Dialogue _currentDialogue;
-        private DialogueContext _context;
-        
-        public async void StartDialogue(DialogueAsset dialogueAsset)
-        {
-            _context = new DialogueContext(this, dialogueAsset);
-            _currentDialogue = new Dialogue(dialogueAsset, _context);
+        [SerializeField] private UnityEvent onAdvanceActionPerformed = new();
 
-            await _currentDialogue.StartDialogueEvent();
-            NextDialogueLine();
-        }
+        private Story _story;
 
-        public async void NextDialogueLine()
+        private Story Story
         {
-            if (_currentDialogue.HasNextLine)
+            get
             {
-                var line = _currentDialogue.GetNextDialogueLine();
-                await boxView.ShowLine(line);
-            }
-            else
-            {
-                await _currentDialogue.FinishDialogueEvent();
-                
-                if(_currentDialogue.DialogueAsset.NextDialogue != null)
-                    StartDialogue(_currentDialogue.DialogueAsset.NextDialogue);
-            }
-        }
-
-        private void OnEnable() => advanceAction.action.performed += OnAdvancePressed;
-        private void OnDisable() => advanceAction.action.performed -= OnAdvancePressed;
-
-        private void OnAdvancePressed(InputAction.CallbackContext ctx)
-        {
-            if (_currentDialogue == null) return;
-
-            if (boxView.IsTyping)
-                boxView.SkipTyping();
-            else
-                NextDialogueLine();
-        }
-        
-        private class Dialogue
-        {
-            public DialogueAsset DialogueAsset { get; private set; }
-            
-            private DialogueContext _context;
-            
-            private readonly Queue<DialogueAsset.DialogueLine> _dialogueLines = new();
-
-            private readonly DialogueEvent _startDialogueEvent;
-            private readonly DialogueEvent _finishDialogueEvent;
-            
-            public Dialogue(DialogueAsset dialogueAsset, DialogueContext context)
-            {
-                DialogueAsset = dialogueAsset;
-
-                foreach (var dialogueLine in dialogueAsset.DialogueLines)
+                if (_story == null)
                 {
-                    _dialogueLines.Enqueue(dialogueLine);
+                    _story = new Story(inkJson.text);
                 }
                 
-                _startDialogueEvent = dialogueAsset.StartDialogueEvent;
-                _finishDialogueEvent = dialogueAsset.FinishDialogueEvent;
+                return _story;
+            }
+        }
+
+        private void Awake()
+        {
+            _story = new Story(inkJson.text);
+            //_story.BindExternalFunction("Shake", (float intensity) => effects.Shake(intensity));
+        }
+
+        private void OnEnable() => advanceAction.action.performed += OnAdvancePerformed;
+        private void OnDisable() => advanceAction.action.performed -= OnAdvancePerformed;
+
+        public async void StartDialogueAt(string knotName)
+        {
+            boxView.ApplyStyle(defaultStyle);
+            boxView.Show();
+            
+            Story.ChoosePathString(knotName);
+            await ContinueStory();
+        }
+
+        private async Task ContinueStory()
+        {
+            while (Story.canContinue)
+            {
+                string text = Story.Continue().Trim();
+                var tags = Story.currentTags;
+
+                foreach (var tag in tags)
+                {
+                    if (tag.StartsWith("fade:"))
+                        await effects.Fade(tag.Substring(5));
+                }
+
+                if (!string.IsNullOrEmpty(text))
+                {
+                    var line = DialogueLineParser.Parse(text, tags);
+                    await boxView.ShowLine(line);
+                    return;
+                }
             }
 
-            public DialogueAsset.DialogueLine GetNextDialogueLine() => _dialogueLines.Dequeue();
+            if (Story.currentChoices.Count > 0)
+            {
+                int index = await choiceView.ShowChoices(Story.currentChoices);
+                Story.ChooseChoiceIndex(index);
+                await ContinueStory();
+            }
+        }
 
-            public async Task StartDialogueEvent() => await (_startDialogueEvent.Execute(_context) ?? Task.CompletedTask);
-            public async Task FinishDialogueEvent() => await (_finishDialogueEvent.Execute(_context) ?? Task.CompletedTask);
-
-            public bool HasNextLine => _dialogueLines.Count > 0;
+        private async void OnAdvancePerformed(InputAction.CallbackContext ctx)
+        {
+            if (boxView.IsTyping)
+            {
+                boxView.SkipTyping();
+            }
+            else if (Story.canContinue)
+            {
+                onAdvanceActionPerformed?.Invoke();
+                await ContinueStory();
+            }
         }
     }
 }

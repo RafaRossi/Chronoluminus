@@ -3,7 +3,7 @@
     "name": "Input",
     "maps": [
         {
-            "name": "Gameplay",
+            "name": "Dialogue",
             "id": "b808f98c-4549-418b-9552-df6476ba3254",
             "actions": [
                 {
@@ -21,6 +21,39 @@
                     "name": "",
                     "id": "017a6083-d75e-4cb3-867f-6125763a76a5",
                     "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "576fb0ff-e828-480e-b57d-8832da3fb63c",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "145b58e5-8920-4016-921b-95d41ec61fb3",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4a87f850-440f-470d-abbb-6a2bceb8873f",
+                    "path": "*/{Submit}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
