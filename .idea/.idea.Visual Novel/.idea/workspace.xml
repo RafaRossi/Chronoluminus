@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f61e95a-804b-46be-9de0-74970aa0d8cb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Header.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Header.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Header.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Header.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Visual Novel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Visual Novel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/End Dialogue Indicator/Clicked.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/End Dialogue Indicator/Clicked.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/End Dialogue Indicator/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/End Dialogue Indicator/Idle.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/End Dialogue Indicator/Off.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/End Dialogue Indicator/Off.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Input Actions/Input.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Actions/Input.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Main Dialogue Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Main Dialogue Controller.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueAsset.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueAsset.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueBoxView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueBoxView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Flow/StartDialogueKnotOnSceneEnabled.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Flow/StartDialogueKnotOnSceneEnabled.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +35,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandsQueue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueCommandsQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueEffects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Knowledge System/KnowledgeFlag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSideScrollController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shader/BillboardSprite.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.14.2/InputSystem/Editor/ControlPicker/InputControlPathEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -97,15 +107,13 @@
       <option name="useMixedMode" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33108">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="33108" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -128,6 +136,9 @@
       <workItem from="1787021896121" duration="2464000" />
       <workItem from="1787188563568" duration="4253000" />
       <workItem from="1787258940825" duration="12070000" />
+      <workItem from="1787412882066" duration="7720000" />
+      <workItem from="1787518626375" duration="3773000" />
+      <workItem from="1787582593840" duration="13116000" />
     </task>
     <servers />
   </component>

@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using DialogueSystem;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -16,21 +18,51 @@ public class CharacterPortrait
 
 public class DialogueBoxView : MonoBehaviour
 {
+    private static readonly int ShowDialogueBox = Animator.StringToHash("Show");
+    private static readonly int HideDialogueBox = Animator.StringToHash("Hide");
+
+    [Header("Dialogue Box")]
+    [SerializeField] private DialogueController dialogueController;
+    [SerializeField] private Animator dialogueBoxAnimator;
+    
     [SerializeField] private TMP_Text dialogueText;
+    
+    [SerializeField] private Animator endLineIndicator;
+    
+    [Header("Speaker")]
+    [SerializeField] private Animator speakerAnimator;
     [SerializeField] private TMP_Text speakerNameText;
     [SerializeField] private Image speakerImage;
     [SerializeField] private List<CharacterPortrait> portraits;
     
-    [SerializeField] private Animator endLineIndicator;
+    [Header("Input")]
+    [SerializeField] private InputActionReference advanceAction;
+    [SerializeField] private UnityEvent onAdvanceActionPerformed = new();
 
     private DialogueBoxStyle _currentStyle;
     private CancellationTokenSource _typingCts;
 
     public bool IsTyping { get; private set; }
+    
+    private void OnEnable() => advanceAction.action.performed += OnAdvancePerformed;
+    private void OnDisable() => advanceAction.action.performed -= OnAdvancePerformed;
+
 
     public void Show()
     {
         gameObject.SetActive(true);
+        
+        dialogueBoxAnimator.SetTrigger(ShowDialogueBox);
+    }
+
+    public void Hide()
+    {
+        dialogueBoxAnimator.SetTrigger(HideDialogueBox);
+    }
+
+    public void Close()
+    {
+        gameObject.SetActive(false);
     }
 
     public void ApplyStyle(DialogueBoxStyle style)
@@ -84,8 +116,21 @@ public class DialogueBoxView : MonoBehaviour
         }
     }
 
-    public void SkipTyping()
+    private void SkipTyping()
     {
         _typingCts?.Cancel();
+    }
+    
+    private async void OnAdvancePerformed(InputAction.CallbackContext ctx)
+    {
+        if (IsTyping)
+        {
+            SkipTyping();
+        }
+        else
+        {
+            onAdvanceActionPerformed?.Invoke();
+            await dialogueController.ContinueStory();
+        }
     }
 }

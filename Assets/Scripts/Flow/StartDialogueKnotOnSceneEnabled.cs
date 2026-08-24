@@ -11,6 +11,6 @@ public class StartDialogueKnotOnSceneEnabled : MonoBehaviour
 
     private void OnEnable()
     {
-        dialogueController.StartDialogueAt(knotName);
+        dialogueController.CommandsQueue.Enqueue(new OpenDialogueCommand(knotName));
     }
 }
