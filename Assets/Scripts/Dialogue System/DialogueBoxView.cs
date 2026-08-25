@@ -52,18 +52,14 @@ public class DialogueBoxView : MonoBehaviour
     {
         gameObject.SetActive(true);
         
-        dialogueBoxAnimator.SetTrigger(ShowDialogueBox);
+        dialogueBoxAnimator.Play(ShowDialogueBox);
     }
 
     public void Hide()
     {
-        dialogueBoxAnimator.SetTrigger(HideDialogueBox);
+        dialogueBoxAnimator.Play(HideDialogueBox);
     }
-
-    public void Close()
-    {
-        gameObject.SetActive(false);
-    }
+    
 
     public void ApplyStyle(DialogueBoxStyle style)
     {

@@ -135,7 +135,7 @@ MonoBehaviour:
   acceleration: 25
   moveActionReference: {fileID: 1409421715210468687, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
   lockZPosition: 1
-  fixedZ: 20
+  fixedZ: 5
   gravity: -20
   spriteRoot: {fileID: 8032921159096694404}
   animator: {fileID: 0}

@@ -1,16 +1,17 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using DialogueSystem;
 using UnityEngine;
 
-public class StartDialogueKnotOnSceneEnabled : MonoBehaviour
+public class StartDialogueKnotOnSceneStartWithDelay : MonoBehaviour
 {
     [SerializeField] private DialogueController dialogueController;
     [SerializeField] private string knotName;
+    
+    [SerializeField] private float delayTime = 0.1f;
 
-    private void OnEnable()
+    private IEnumerator Start()
     {
         dialogueController.CommandsQueue.Enqueue(new OpenDialogueCommand(knotName));
+        yield return new WaitForSeconds(delayTime);
     }
 }

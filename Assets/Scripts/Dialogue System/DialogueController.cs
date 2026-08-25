@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Ink.Runtime;
 using UnityEngine;
@@ -19,7 +20,6 @@ namespace DialogueSystem
 
         [SerializeField] private UnityEvent onStartTyping = new();
         [SerializeField] private UnityEvent onEndTyping = new();
-        
 
         private Story _story;
 
@@ -35,7 +35,12 @@ namespace DialogueSystem
                 return _story;
             }
         }
-        
+
+        private void Awake()
+        {
+            commandsQueue.Initialize(new DialogueCommandsContext(this));
+        }
+
         public async void StartDialogueAt(string knotName)
         {
             CameraInputLock.Lock("Dialogue");

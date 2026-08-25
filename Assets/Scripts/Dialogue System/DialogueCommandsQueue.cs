@@ -13,11 +13,11 @@ public interface IDialogueCommand : ICommand<DialogueCommandsContext> { }
 
 public class DialogueCommandsContext : ICommandContext
 {
-    public readonly DialogueController Controller;
+    public readonly DialogueController controller;
 
     public DialogueCommandsContext(DialogueController controller)
     {
-        Controller = controller;
+        this.controller = controller;
     }
 }
 
@@ -32,7 +32,7 @@ public class OpenDialogueCommand : IDialogueCommand
     
     public Task Execute(DialogueCommandsContext context)
     {
-        context.Controller.StartDialogueAt(_dialogueStartKnot);
+        context.controller.StartDialogueAt(_dialogueStartKnot);
         return Task.CompletedTask;
     }
 }
@@ -41,7 +41,7 @@ public class CloseDialogueCommand : IDialogueCommand
 {
     public Task Execute(DialogueCommandsContext context)
     {
-        context.Controller.EndDialogue();
+        context.controller.EndDialogue();
         
         return Task.CompletedTask;
     }
