@@ -1,4 +1,4 @@
-Shader "Custom/URP_Billboard_Sprite"
+Shader "Custom/URP/Billboard_Sprite"
 {
     Properties
     {

@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -132,7 +132,7 @@ TextureImporter:
         height: 378
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 296, y: 110, z: 142, w: 87}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -147,10 +147,10 @@ TextureImporter:
       name: UI_Basics_1
       rect:
         serializedVersion: 2
-        x: 1113
-        y: 1639
-        width: 1290
-        height: 390
+        x: 1366
+        y: 1502
+        width: 446
+        height: 522
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: UI_Basics_2
       rect:
         serializedVersion: 2
-        x: 93
-        y: 1192
-        width: 995
-        height: 377
+        x: 1894
+        y: 1502
+        width: 446
+        height: 522
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: UI_Basics_3
       rect:
         serializedVersion: 2
-        x: 1113
-        y: 1191
-        width: 1290
-        height: 390
+        x: 2528
+        y: 1600
+        width: 456
+        height: 448
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: UI_Basics_4
       rect:
         serializedVersion: 2
-        x: 75
-        y: 824
-        width: 1014
-        height: 280
+        x: 3118
+        y: 1600
+        width: 446
+        height: 448
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: UI_Basics_5
       rect:
         serializedVersion: 2
-        x: 1116
-        y: 824
-        width: 1185
-        height: 280
+        x: 93
+        y: 1192
+        width: 994
+        height: 377
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,13 +252,13 @@ TextureImporter:
       name: UI_Basics_7
       rect:
         serializedVersion: 2
-        x: 2759
-        y: 866
-        width: 257
-        height: 262
+        x: 1894
+        y: 936
+        width: 446
+        height: 522
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 289, y: 295, z: 140, w: 212}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -273,10 +273,10 @@ TextureImporter:
       name: UI_Basics_8
       rect:
         serializedVersion: 2
-        x: 3080
-        y: 864
-        width: 256
-        height: 258
+        x: 2535
+        y: 1080
+        width: 446
+        height: 456
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: UI_Basics_9
       rect:
         serializedVersion: 2
-        x: 2441
-        y: 865
-        width: 258
-        height: 258
+        x: 3118
+        y: 1080
+        width: 450
+        height: 456
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,9 +316,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 75
-        y: 440
-        width: 1015
-        height: 281
+        y: 824
+        width: 1014
+        height: 280
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: UI_Basics_11
       rect:
         serializedVersion: 2
-        x: 1115
-        y: 440
-        width: 1186
-        height: 281
+        x: 2380
+        y: 752
+        width: 1120
+        height: 284
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: UI_Basics_12
       rect:
         serializedVersion: 2
-        x: 69
-        y: 48
-        width: 1043
-        height: 280
+        x: 75
+        y: 440
+        width: 1015
+        height: 281
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: UI_Basics_13
       rect:
         serializedVersion: 2
-        x: 1182
-        y: 48
-        width: 1042
-        height: 280
+        x: 2380
+        y: 419
+        width: 1120
+        height: 285
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,6 +391,132 @@ TextureImporter:
       bones: []
       spriteID: 8ba2b36d6ec81ce4cb01107c0ed0683b
       internalID: -1070498638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Basics_6
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 934
+        width: 446
+        height: 522
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763fb016adef9ce4b9eff07ef16e9b0c
+      internalID: -254337716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Basics_14
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 48
+        width: 1043
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0efd05258faf048bca8490f88822ab
+      internalID: 1029493205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Basics_15
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 48
+        width: 1045
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362dca9465323624daf716892154b437
+      internalID: 1975741154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Basics_17
+      rect:
+        serializedVersion: 2
+        x: 2759
+        y: 56
+        width: 257
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4765b3e7993f65e409409ec808e36b5c
+      internalID: -1335682379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Basics_18
+      rect:
+        serializedVersion: 2
+        x: 3080
+        y: 56
+        width: 256
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d70834b0f8bbff4aa0555febdcae08d
+      internalID: -355683516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Basics_16
+      rect:
+        serializedVersion: 2
+        x: 2442
+        y: 60
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264ba5dc8140bf84a9a874fc8c23177e
+      internalID: -985885915
       vertices: []
       indices: 
       edges: []
@@ -412,6 +538,12 @@ TextureImporter:
       UI_Basics_11: -1286485883
       UI_Basics_12: -148340800
       UI_Basics_13: -1070498638
+      UI_Basics_14: 1029493205
+      UI_Basics_15: 1975741154
+      UI_Basics_16: -985885915
+      UI_Basics_17: -1335682379
+      UI_Basics_18: -355683516
+      UI_Basics_19: -182622366
       UI_Basics_2: 526784624
       UI_Basics_3: -1454505944
       UI_Basics_4: 2008364281

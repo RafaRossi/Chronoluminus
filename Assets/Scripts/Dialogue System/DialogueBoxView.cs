@@ -60,6 +60,11 @@ public class DialogueBoxView : MonoBehaviour
         dialogueBoxAnimator.Play(HideDialogueBox);
     }
     
+    public void Close()
+    {
+        gameObject.SetActive(false);
+    }
+    
 
     public void ApplyStyle(DialogueBoxStyle style)
     {

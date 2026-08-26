@@ -11,7 +11,7 @@ public class StartDialogueKnotOnSceneStartWithDelay : MonoBehaviour
 
     private IEnumerator Start()
     {
-        dialogueController.CommandsQueue.Enqueue(new OpenDialogueCommand(knotName));
+        DialogueController.CommandsQueue.Enqueue(new OpenDialogueCommand(knotName));
         yield return new WaitForSeconds(delayTime);
     }
 }

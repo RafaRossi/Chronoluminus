@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using Ink.Runtime;
 using UnityEngine;
@@ -8,8 +7,7 @@ namespace DialogueSystem
 {
     public class DialogueController : MonoBehaviour
     {
-        [SerializeField] private DialogueCommandsQueue commandsQueue;
-        public DialogueCommandsQueue CommandsQueue => commandsQueue;
+        public static DialogueCommandsQueue CommandsQueue { get; } = new();
         
         [SerializeField] private TextAsset inkJson;
         [SerializeField] private DialogueBoxView boxView;
@@ -38,7 +36,7 @@ namespace DialogueSystem
 
         private void Awake()
         {
-            commandsQueue.Initialize(new DialogueCommandsContext(this));
+            CommandsQueue.Initialize(new DialogueCommandsContext(this));
         }
 
         public async void StartDialogueAt(string knotName)
