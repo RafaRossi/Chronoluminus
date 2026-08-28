@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using DialogueSystem;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -33,13 +34,14 @@ public class DialogueBoxView : MonoBehaviour
     [SerializeField] private Animator speakerAnimator;
     [SerializeField] private TMP_Text speakerNameText;
     [SerializeField] private Image speakerImage;
-    [SerializeField] private List<CharacterPortrait> portraits;
     
     [Header("Input")]
     [SerializeField] private InputActionReference advanceAction;
     [SerializeField] private UnityEvent onAdvanceActionPerformed = new();
 
     private DialogueBoxStyle _currentStyle;
+    private EventReference _currentTypingSound;
+    
     private CancellationTokenSource _typingCts;
 
     public bool IsTyping { get; private set; }
@@ -80,18 +82,34 @@ public class DialogueBoxView : MonoBehaviour
 
         speakerNameText.gameObject.SetActive(!string.IsNullOrEmpty(line.SpeakerName));
         speakerNameText.text = line.SpeakerName;
+        
+        _currentTypingSound = _currentStyle.DefaultTypingSound;
+        dialogueText.font = _currentStyle.Font;
 
-        var portrait = portraits.Find(p => p.key == line.SpriteKey);
-        speakerImage.gameObject.SetActive(portrait != null);
-        speakerImage.sprite = portrait?.sprite;
+        var speaker = dialogueController.GetSpeakerData(line.SpeakerKey);
+
+        if (speaker)
+        {
+            speakerImage.gameObject.SetActive(true);
+            speakerImage.sprite = speaker.sprite;
+            
+            _currentTypingSound = speaker.typingSound;
+
+            dialogueText.font = speaker.customFont != null ? speaker.customFont : _currentStyle.Font;
+        }
+        else
+        {
+            speakerImage.gameObject.SetActive(false);
+        }
 
         dialogueText.text = line.Text;
         dialogueText.maxVisibleCharacters = 0;
+        dialogueText.ForceMeshUpdate();
         IsTyping = true;
 
         try
         {
-            await TypeText(line.Text.Length, _typingCts.Token);
+            await TypeText(dialogueText.textInfo.characterCount, _typingCts.Token); 
         }
         catch (OperationCanceledException) { }
         finally
@@ -107,14 +125,32 @@ public class DialogueBoxView : MonoBehaviour
     {
         float elapsed = 0f;
         int shown = 0;
+
         while (shown < totalChars)
         {
             token.ThrowIfCancellationRequested();
             await Task.Yield();
             elapsed += Time.deltaTime;
-            shown = Mathf.Min(Mathf.FloorToInt(elapsed * _currentStyle.CharactersPerSecond), totalChars);
-            dialogueText.maxVisibleCharacters = shown;
+
+            int newShown = Mathf.Min(Mathf.FloorToInt(elapsed * _currentStyle.CharactersPerSecond), totalChars);
+
+            if (newShown > shown)
+            {
+                char c = dialogueText.textInfo.characterInfo[newShown - 1].character;
+                PlayTypingSound(c);
+            
+                shown = newShown;
+                dialogueText.maxVisibleCharacters = shown;
+            }
         }
+    }
+
+    private void PlayTypingSound(char c)
+    {
+        if (_currentTypingSound.IsNull) return;
+        if (char.IsWhiteSpace(c) || char.IsPunctuation(c)) return;
+
+        RuntimeManager.PlayOneShot(_currentTypingSound);
     }
 
     private void SkipTyping()

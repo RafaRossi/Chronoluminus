@@ -6,13 +6,13 @@ namespace DialogueSystem
     {
         public readonly string Text;
         public readonly string SpeakerName;
-        public readonly string SpriteKey;
+        public readonly string SpeakerKey;
 
-        public DisplayLine(string text, string speakerName, string spriteKey)
+        public DisplayLine(string text, string speakerName, string speakerKey)
         {
             Text = text;
             SpeakerName = speakerName;
-            SpriteKey = spriteKey;
+            SpeakerKey = speakerKey;
         }
     }
 

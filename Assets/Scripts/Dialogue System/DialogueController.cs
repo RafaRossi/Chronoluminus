@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Ink.Runtime;
 using UnityEngine;
@@ -15,6 +16,8 @@ namespace DialogueSystem
         [SerializeField] private DialogueEffects effects;
         
         [SerializeField] private DialogueBoxStyle defaultStyle;
+
+        [SerializeField] private SpeakerDatabase allSpeakers;
 
         [SerializeField] private UnityEvent onStartTyping = new();
         [SerializeField] private UnityEvent onEndTyping = new();
@@ -88,6 +91,13 @@ namespace DialogueSystem
             
             CameraInputLock.Unlock("Dialogue");
             CommandsQueue.Enqueue(new CloseDialogueCommand());
+        }
+
+        public SpeakerData GetSpeakerData(string speakerID)
+        {
+            var speakers = allSpeakers.GetSpeakers();
+
+            return string.IsNullOrEmpty(speakerID) ? null : speakers.GetValueOrDefault(speakerID);
         }
     }
 }

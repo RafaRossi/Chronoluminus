@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using FMODUnity;
+using TMPro;
 using UnityEngine;
 
 namespace DialogueSystem
@@ -10,5 +11,6 @@ namespace DialogueSystem
         public Color TextColor = Color.white;
         public Sprite BoxBackground;
         public float CharactersPerSecond = 40f;
+        public EventReference DefaultTypingSound;
     }
 }

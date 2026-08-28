@@ -51,6 +51,7 @@ MonoBehaviour:
   choiceView: {fileID: 3683501935270671939}
   effects: {fileID: 4959745450677857817}
   defaultStyle: {fileID: 11400000, guid: cef855c0a9962d9428c9d9ee927bc2c6, type: 2}
+  allSpeakers: {fileID: 11400000, guid: 3c9033f05ec48a146b08a1c0e753d85a, type: 2}
   onStartTyping:
     m_PersistentCalls:
       m_Calls: []
@@ -704,7 +705,6 @@ MonoBehaviour:
   speakerAnimator: {fileID: 2725994980813362164}
   speakerNameText: {fileID: 3294831831872209251}
   speakerImage: {fileID: 6444542833863371684}
-  portraits: []
   advanceAction: {fileID: -2532750174449261865, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
   onAdvanceActionPerformed:
     m_PersistentCalls:

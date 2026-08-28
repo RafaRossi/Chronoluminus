@@ -135,10 +135,10 @@ Material:
     - _StencilWriteMask: 255
     - _Surface: 0
     - _UseUIAlphaClip: 0
-    - _WobbleAmplitude: 0.0005
+    - _WobbleAmplitude: 0.0013
     - _WobbleAxisMix: 0.485
-    - _WobbleFrequency: 2
-    - _WobbleSpeed: 13.75
+    - _WobbleFrequency: 1.8
+    - _WobbleSpeed: 5.4
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
