@@ -20,5 +20,5 @@ MonoBehaviour:
       Data2: 1257096141
       Data3: -1425672568
       Data4: 1998854940
-    Path: event:/UI_Dialog_Blip
+    Path: event:/UI_Dialog_Blip_Updated
   customFont: {fileID: 11400000, guid: 62f796a7ae0fb7d41849c3b41b31eaa4, type: 2}

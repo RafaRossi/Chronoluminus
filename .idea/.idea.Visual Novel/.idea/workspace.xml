@@ -11,24 +11,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f61e95a-804b-46be-9de0-74970aa0d8cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/SpeakerData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/SpeakerData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Commands/InitializationQueue.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Commands/InitializationQueue.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Day System/DayController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Day System/DayController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Visual Novel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Visual Novel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Speaker Container/Hide.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Speaker Container/Hide.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sprites/M_InteractionIndicator.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sprites/M_InteractionIndicator.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-ExtraBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-ExtraLight SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-ExtraLight SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Light SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Medium SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-SemiBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Thin SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Thin SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera - Perspective - Follow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera - Perspective - Follow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Main Dialogue Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Main Dialogue Controller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Side Scroll Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Side Scroll Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Dialogue Box Style/Default Dialog Box Style.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Dialogue Box Style/Default Dialog Box Style.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/Dialogue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueBoxStyle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueBoxStyle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Speakers/Main Character.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Speakers/Main Character.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueBoxView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueBoxView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +52,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/886395f7f3c74189a56ab6a83f48987217a600/95/907de78d/IMGUIContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CinemachineMouseParallax.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/CommandsQueue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Commands/InitializationQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueCommandsQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueEffects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue System/SpeakerDatabase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,7 +62,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/ShowOptionsSelectionOnInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Knowledge System/KnowledgeFlag.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerSideScrollController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Scene Loader/SceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Transition/SimpleFade.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/FloatingObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shader/BillboardSprite.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shader/URP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.14.2/InputSystem/Editor/ControlPicker/InputControlPathEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -125,10 +136,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="11156">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="32912">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11156" />
+      <option name="pid" value="32912" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>

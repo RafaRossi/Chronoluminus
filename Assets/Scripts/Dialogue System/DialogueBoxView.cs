@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using DialogueSystem;
@@ -10,7 +9,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-[System.Serializable]
+[Serializable]
 public class CharacterPortrait
 {
     public string key;
@@ -33,6 +32,8 @@ public class DialogueBoxView : MonoBehaviour
     [Header("Speaker")]
     [SerializeField] private Animator speakerAnimator;
     [SerializeField] private TMP_Text speakerNameText;
+
+    [SerializeField] private RectTransform speakerContainer;
     [SerializeField] private Image speakerImage;
     
     [Header("Input")]
@@ -90,7 +91,7 @@ public class DialogueBoxView : MonoBehaviour
 
         if (speaker)
         {
-            speakerImage.gameObject.SetActive(true);
+            speakerContainer.gameObject.SetActive(true);
             speakerImage.sprite = speaker.sprite;
             
             _currentTypingSound = speaker.typingSound;
@@ -99,7 +100,7 @@ public class DialogueBoxView : MonoBehaviour
         }
         else
         {
-            speakerImage.gameObject.SetActive(false);
+            speakerContainer.gameObject.SetActive(false);
         }
 
         dialogueText.text = line.Text;

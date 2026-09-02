@@ -84,6 +84,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2815621951690753387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5919705276038152091}
+  - component: {fileID: 1344568784691203979}
+  m_Layer: 0
+  m_Name: Camera Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5919705276038152091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815621951690753387}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3704734243180279886}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1344568784691203979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2815621951690753387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3773116f1ab343d4b863f057ff42836c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatAmplitude: 0.15
+  floatSpeed: 0.8
+  rotationSpeed: 0
+  rotationAxis: 1
+  timeOffset: 0
 --- !u!1 &8729934428899013042
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +166,7 @@ Transform:
   m_Children:
   - {fileID: 8032921159096694404}
   - {fileID: 1621439857059521712}
+  - {fileID: 5919705276038152091}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3683351867719497844
@@ -212,7 +262,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2eb6cc09975bcd44b763c8a6d263140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <InteractionQueue>k__BackingField: {fileID: 0}
   interactionInput: {fileID: -5458582829904409675, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
 --- !u!65 &8681020300090892689
 BoxCollider:
