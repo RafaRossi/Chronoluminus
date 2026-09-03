@@ -44,7 +44,7 @@ namespace DialogueSystem
 
         public async void StartDialogueAt(string knotName)
         {
-            CameraInputLock.Lock("Dialogue");
+            PlayerInputLock.Lock("Dialogue");
             
             boxView.ApplyStyle(defaultStyle);
             boxView.Show();
@@ -55,7 +55,7 @@ namespace DialogueSystem
 
         public void EndDialogue()
         {
-            CameraInputLock.Unlock("Dialogue");
+            PlayerInputLock.Unlock("Dialogue");
             
             boxView.Hide();
         }
@@ -89,7 +89,7 @@ namespace DialogueSystem
                 await ContinueStory();
             }
             
-            CameraInputLock.Unlock("Dialogue");
+            PlayerInputLock.Unlock("Dialogue");
             CommandsQueue.Enqueue(new CloseDialogueCommand());
         }
 

@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : Singleton<SceneLoader>
 {
+    [SerializeField] private Animator animator;
+    [SerializeField] private CanvasGroup canvasGroup;
     protected override bool IsPersistent => true;
     
     public async Task LoadSceneAsync(SceneID sceneId, UnityAction onLoadFinished)
@@ -16,6 +18,9 @@ public class SceneLoader : Singleton<SceneLoader>
 
         if (asyncLoad != null)
         {
+            animator.enabled = true;
+            canvasGroup.gameObject.SetActive(true);
+            
             asyncLoad.allowSceneActivation = false;
 
             while (asyncLoad.progress < 0.9f)
@@ -29,6 +34,9 @@ public class SceneLoader : Singleton<SceneLoader>
             {
                 await Task.Yield();
             }
+            
+            animator.enabled = false;
+            canvasGroup.gameObject.SetActive(false);
             
             onLoadFinished?.Invoke();
         }

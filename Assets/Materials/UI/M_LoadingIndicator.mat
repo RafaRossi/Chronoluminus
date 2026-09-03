@@ -25,9 +25,9 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _WobbleAmplitude: 0.0004
+    - _WobbleAmplitude: 0.0005
     - _WobbleAxisMix: 0.547
-    - _WobbleFrequency: 33.4
-    - _WobbleSpeed: 3.37
+    - _WobbleFrequency: 0
+    - _WobbleSpeed: 17.4
     m_Colors: []
   m_BuildTextureStacks: []

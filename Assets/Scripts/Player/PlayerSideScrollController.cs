@@ -49,7 +49,7 @@ public class PlayerSideScrollController : MonoBehaviour
 
     private void Update()
     {
-        if (CameraInputLock.IsLocked)
+        if (PlayerInputLock.IsLocked)
         {
             ApplyGravityOnly();
             return;

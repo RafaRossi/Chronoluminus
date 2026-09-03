@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Commands;
 using UnityEngine;
@@ -10,7 +8,6 @@ public class GameInitContext : ICommandContext
 {
     [field:SerializeField] public DayController DayController { get; private set; }
 }
-
 
 public class GameBootstrapper : MonoBehaviour
 {

@@ -1,11 +1,11 @@
 using UnityEngine;
-using Cinemachine;
+
 using UnityEngine.InputSystem;
 
 [ExecuteInEditMode]
-[SaveDuringPlay]
+[Unity.Cinemachine.SaveDuringPlay]
 [AddComponentMenu("")]
-public class CinemachineMouseParallax : CinemachineExtension
+public class CinemachineMouseParallax : Unity.Cinemachine.CinemachineExtension
 {
     [SerializeField] private Vector2 intensity;
     [SerializeField] private float smoothness = 5f;
@@ -27,9 +27,9 @@ public class CinemachineMouseParallax : CinemachineExtension
     }
 
     protected override void PostPipelineStageCallback(
-        CinemachineVirtualCameraBase vcam, CinemachineCore.Stage stage, ref CameraState state, float deltaTime)
+        Unity.Cinemachine.CinemachineVirtualCameraBase vcam, Unity.Cinemachine.CinemachineCore.Stage stage, ref Unity.Cinemachine.CameraState state, float deltaTime)
     {
-        if (stage == CinemachineCore.Stage.Body && Application.isPlaying)
+        if (stage == Unity.Cinemachine.CinemachineCore.Stage.Body && Application.isPlaying)
         {
             float normalX = 0f;
             float normalY = 0f;

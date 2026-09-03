@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Cinemachine;
 
-[RequireComponent(typeof(CinemachineVirtualCamera))]
 public class CylinderEdgeScrollCamera : MonoBehaviour
 {
     [Header("Border")]
@@ -42,7 +40,7 @@ public class CylinderEdgeScrollCamera : MonoBehaviour
 
     private void Update()
     {
-        if (CameraInputLock.IsLocked) return;
+        if (PlayerInputLock.IsLocked) return;
 
         Vector2 mousePos = Mouse.current != null ? Mouse.current.position.ReadValue() : Vector2.zero;
         Vector2 gamepadStick = Gamepad.current != null ? Gamepad.current.rightStick.ReadValue() : Vector2.zero;

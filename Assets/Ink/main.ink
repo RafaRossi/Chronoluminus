@@ -1,1 +1,3 @@
-INCLUDE Assets/Knots/Player Bedroom/PlayerBedroom.ink
+ola
+
+espero nao estar te atrapalhando
