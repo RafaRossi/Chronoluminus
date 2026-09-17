@@ -249,14 +249,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 90801983899900856}
-  - component: {fileID: 3076630092901353092}
+  - component: {fileID: 8524022589891840903}
   m_Layer: 5
   m_Name: Choice Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &90801983899900856
 RectTransform:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 1080}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &3076630092901353092
+--- !u!114 &8524022589891840903
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -289,9 +289,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8622548034384386241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 511d26ceac3d6dd46b35c48e76fce29f, type: 3}
+  m_Script: {fileID: 11500000, guid: 2264ef819edf4050810b974c4ea531d3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSystem.ChoiceVerticalCross
   root: {fileID: 8622548034384386241}
   defaultSelectedObject: {fileID: 4253443090029811223}
   promptText: {fileID: 5325677879561473669}
@@ -403,6 +403,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5322796528517035129, guid: 8227b848f8d3a814e81acd5df7f971c4, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 7491992939252746425, guid: 8227b848f8d3a814e81acd5df7f971c4, type: 3}
       propertyPath: m_Name
       value: Right Choice Button
@@ -450,6 +454,10 @@ PrefabInstance:
     - target: {fileID: 272867353050298366, guid: 367960287dbd08548aad104b521a49a6, type: 3}
       propertyPath: m_Name
       value: Header
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134546507927588303, guid: 367960287dbd08548aad104b521a49a6, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 7761434065091849420, guid: 367960287dbd08548aad104b521a49a6, type: 3}
       propertyPath: m_Pivot.x
@@ -660,6 +668,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4155895018115609284, guid: 6c80339ff24fa9944b83ef689af79396, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -700,6 +712,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6302062609433756614}
     m_Modifications:
+    - target: {fileID: 64595179038131115, guid: ecde5c32ace896a439ef595e97e01bed, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 930404223901497685, guid: ecde5c32ace896a439ef595e97e01bed, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -847,6 +863,10 @@ PrefabInstance:
     - target: {fileID: 8338615494366768393, guid: 2f4f8785dfc942d47b281f624b03ea9c, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8338615494366768393, guid: 2f4f8785dfc942d47b281f624b03ea9c, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 9087532876480225461, guid: 2f4f8785dfc942d47b281f624b03ea9c, type: 3}
       propertyPath: m_Navigation.m_SelectOnUp

@@ -1,55 +1,34 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using DialogueSystem;
 using Ink.Runtime;
-using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace DialogueSystem
 {
-    public class ChoiceView : MonoBehaviour
+    public abstract class ChoiceView : MonoBehaviour
     {
-        [SerializeField] private GameObject root;
-        [SerializeField] private Selectable defaultSelectedObject;
+        [SerializeField] protected GameObject root;
+        [SerializeField] protected Selectable defaultSelectedObject;
         
-        [SerializeField] private TMP_Text promptText;
-        [SerializeField] private ChoiceButton upButton, rightButton, downButton, leftButton;
+        protected TaskCompletionSource<int> tcs;
+
+        public abstract Task<int> ShowChoices(List<Choice> choices);
         
-        private TaskCompletionSource<int> _tcs;
-        
-        public Task<int> ShowChoices(List<Choice> choices)
+        protected void Select(int choice)
         {
-            _tcs = new TaskCompletionSource<int>();
-            root.SetActive(true);
-            
-            var slots = new[] { leftButton, rightButton, upButton, downButton };
-            
-            for (int i = 0; i < slots.Length; i++)
-            {
-                if (i < choices.Count)
-                {
-                    var choice = choices[i].index;
-                    slots[i].Setup(choices[i].text, () => Select(choice));
-                }
-                else
-                {
-                    slots[i].Hide();
-                }
-            }
-            
-            EventSystem.current.SetSelectedGameObject(defaultSelectedObject.gameObject);
-            
-            return _tcs.Task;
+            Disable();
+            tcs?.TrySetResult(choice);
         }
-        
-        private void Select(int choice)
+
+        public void Disable()
         {
             root.SetActive(false);
-            _tcs?.TrySetResult(choice);
+        }
+
+        public void Enable()
+        {
+            root.SetActive(true);
         }
     }
 }

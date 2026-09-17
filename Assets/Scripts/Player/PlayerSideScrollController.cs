@@ -36,25 +36,10 @@ public class PlayerSideScrollController : MonoBehaviour
     {
         if (spriteRoot == null) spriteRoot = transform;
     }
-
-    private void OnEnable()
-    {
-        moveActionReference.action.Enable();
-    }
-
-    private void OnDisable()
-    {
-        moveActionReference.action.Disable();
-    }
+    
 
     private void Update()
     {
-        if (PlayerInputLock.IsLocked)
-        {
-            ApplyGravityOnly();
-            return;
-        }
-
         float moveInput = GetMoveInputX();
 
         float targetSpeed = moveInput * moveSpeed;

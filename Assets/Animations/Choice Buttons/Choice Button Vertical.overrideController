@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Choice Button Vertical
+  m_Controller: {fileID: 9100000, guid: 9436491c33d5bc944a73f79f98916187, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -989974502985982714, guid: 9436491c33d5bc944a73f79f98916187, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d10a1334e9847744ca16d6e9ef0c7b93, type: 2}
+  - m_OriginalClip: {fileID: 1990872555042694984, guid: 9436491c33d5bc944a73f79f98916187, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 36bb3b860b7825741a2cc7834cd38b20, type: 2}
+  - m_OriginalClip: {fileID: 1208198713509551450, guid: 9436491c33d5bc944a73f79f98916187, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 75c9a71e191a8784fb9561e1ba605b43, type: 2}
+  - m_OriginalClip: {fileID: 7985962360353233935, guid: 9436491c33d5bc944a73f79f98916187, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4a04589bc4aa4464c83450154f86affb, type: 2}
+  - m_OriginalClip: {fileID: -8223708052847523429, guid: 9436491c33d5bc944a73f79f98916187, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4a04589bc4aa4464c83450154f86affb, type: 2}

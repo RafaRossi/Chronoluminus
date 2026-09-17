@@ -9,11 +9,11 @@ namespace Interaction
 
     public interface IInteractionCommand : ICommand<ICommandContext> { }
 
-    public class InteractionCommandsContext : ICommandContext
+    public abstract class InteractionCommandsContext : ICommandContext
     {
         public readonly PlayerInteractionComponent playerInteractionComponent;
 
-        public InteractionCommandsContext(PlayerInteractionComponent playerInteractionComponent)
+        protected InteractionCommandsContext(PlayerInteractionComponent playerInteractionComponent)
         {
             this.playerInteractionComponent = playerInteractionComponent;
         }

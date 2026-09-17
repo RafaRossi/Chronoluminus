@@ -5,8 +5,6 @@ using DialogueSystem;
 using FMODUnity;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 [Serializable]
@@ -22,9 +20,7 @@ public class DialogueBoxView : MonoBehaviour
     private static readonly int HideDialogueBox = Animator.StringToHash("Hide");
 
     [Header("Dialogue Box")]
-    [SerializeField] private DialogueController dialogueController;
     [SerializeField] private Animator dialogueBoxAnimator;
-    
     [SerializeField] private TMP_Text dialogueText;
     
     [SerializeField] private Animator endLineIndicator;
@@ -35,10 +31,6 @@ public class DialogueBoxView : MonoBehaviour
 
     [SerializeField] private RectTransform speakerContainer;
     [SerializeField] private Image speakerImage;
-    
-    [Header("Input")]
-    [SerializeField] private InputActionReference advanceAction;
-    [SerializeField] private UnityEvent onAdvanceActionPerformed = new();
 
     private DialogueBoxStyle _currentStyle;
     private EventReference _currentTypingSound;
@@ -46,9 +38,6 @@ public class DialogueBoxView : MonoBehaviour
     private CancellationTokenSource _typingCts;
 
     public bool IsTyping { get; private set; }
-    
-    private void OnEnable() => advanceAction.action.performed += OnAdvancePerformed;
-    private void OnDisable() => advanceAction.action.performed -= OnAdvancePerformed;
 
 
     public void Show()
@@ -68,7 +57,6 @@ public class DialogueBoxView : MonoBehaviour
         gameObject.SetActive(false);
     }
     
-
     public void ApplyStyle(DialogueBoxStyle style)
     {
         _currentStyle = style;
@@ -87,7 +75,7 @@ public class DialogueBoxView : MonoBehaviour
         _currentTypingSound = _currentStyle.DefaultTypingSound;
         dialogueText.font = _currentStyle.Font;
 
-        var speaker = dialogueController.GetSpeakerData(line.SpeakerKey);
+        var speaker = DialogueController.Instance.GetSpeakerData(line.SpeakerKey);
 
         if (speaker)
         {
@@ -154,21 +142,8 @@ public class DialogueBoxView : MonoBehaviour
         RuntimeManager.PlayOneShot(_currentTypingSound);
     }
 
-    private void SkipTyping()
+    public void SkipTyping()
     {
         _typingCts?.Cancel();
-    }
-    
-    private async void OnAdvancePerformed(InputAction.CallbackContext ctx)
-    {
-        if (IsTyping)
-        {
-            SkipTyping();
-        }
-        else
-        {
-            onAdvanceActionPerformed?.Invoke();
-            await dialogueController.ContinueStory();
-        }
     }
 }

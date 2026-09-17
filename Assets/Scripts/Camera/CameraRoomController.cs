@@ -40,8 +40,6 @@ public class CylinderEdgeScrollCamera : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerInputLock.IsLocked) return;
-
         Vector2 mousePos = Mouse.current != null ? Mouse.current.position.ReadValue() : Vector2.zero;
         Vector2 gamepadStick = Gamepad.current != null ? Gamepad.current.rightStick.ReadValue() : Vector2.zero;
 

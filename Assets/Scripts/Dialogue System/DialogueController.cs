@@ -1,16 +1,18 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Ink.Runtime;
+using Ink.UnityIntegration;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 namespace DialogueSystem
 {
-    public class DialogueController : MonoBehaviour
+    public class DialogueController : Singleton<DialogueController>
     {
         public static DialogueCommandsQueue CommandsQueue { get; } = new();
         
-        [SerializeField] private TextAsset inkJson;
+        [SerializeField] private InkFile inkFile;
         [SerializeField] private DialogueBoxView boxView;
         [SerializeField] private ChoiceView choiceView;
         [SerializeField] private DialogueEffects effects;
@@ -21,6 +23,15 @@ namespace DialogueSystem
 
         [SerializeField] private UnityEvent onStartTyping = new();
         [SerializeField] private UnityEvent onEndTyping = new();
+        
+        [Header("Input")]
+        [SerializeField] private InputActionReference advanceAction;
+        [SerializeField] private UnityEvent onAdvanceActionPerformed = new();
+        
+        private void OnEnable() => advanceAction.action.performed += OnAdvancePerformed;
+        private void OnDisable() => advanceAction.action.performed -= OnAdvancePerformed;
+
+        public UnityAction OnDialogueEnded { get; set; }
 
         private Story _story;
 
@@ -30,21 +41,25 @@ namespace DialogueSystem
             {
                 if (_story == null)
                 {
-                    _story = new Story(inkJson.text);
+                    _story = new Story(inkFile.storyJson);
                 }
                 
                 return _story;
             }
         }
 
-        private void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             CommandsQueue.Initialize(new DialogueCommandsContext(this));
+
+            boxView.gameObject.SetActive(false);
+            choiceView.Disable();
         }
 
         public async void StartDialogueAt(string knotName)
         {
-            PlayerInputLock.Lock("Dialogue");
+            InputManager.Instance.EnableDialogue();
             
             boxView.ApplyStyle(defaultStyle);
             boxView.Show();
@@ -55,9 +70,10 @@ namespace DialogueSystem
 
         public void EndDialogue()
         {
-            PlayerInputLock.Unlock("Dialogue");
+            boxView.Close();
+            OnDialogueEnded?.Invoke();
             
-            boxView.Hide();
+            InputManager.Instance.EnableGameplay();
         }
 
         public async Task ContinueStory()
@@ -88,9 +104,12 @@ namespace DialogueSystem
                 Story.ChooseChoiceIndex(index);
                 await ContinueStory();
             }
+            else
+            {
+                boxView.Hide();
             
-            PlayerInputLock.Unlock("Dialogue");
-            CommandsQueue.Enqueue(new CloseDialogueCommand());
+                CommandsQueue.Enqueue(new CloseDialogueCommand());
+            }
         }
 
         public SpeakerData GetSpeakerData(string speakerID)
@@ -98,6 +117,19 @@ namespace DialogueSystem
             var speakers = allSpeakers.GetSpeakers();
 
             return string.IsNullOrEmpty(speakerID) ? null : speakers.GetValueOrDefault(speakerID);
+        }
+        
+        private async void OnAdvancePerformed(InputAction.CallbackContext ctx)
+        {
+            if (boxView.IsTyping)
+            {
+                boxView.SkipTyping();
+            }
+            else
+            {
+                onAdvanceActionPerformed?.Invoke();
+                await ContinueStory();
+            }
         }
     }
 }
