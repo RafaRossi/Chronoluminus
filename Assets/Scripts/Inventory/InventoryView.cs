@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class InventoryView : MonoBehaviour
 {
+    private static readonly int Shrink = Animator.StringToHash("Shrink");
+    private static readonly int Expand = Animator.StringToHash("Expand");
     [SerializeField] private Animator animator;
     
     [SerializeField] private List<InventoryItemButton> inventoryButtons;
@@ -37,7 +39,6 @@ public class InventoryView : MonoBehaviour
         
     public void ToggleInventory()
     {
-        print("Clcik");
         if (!_isVisible)
         {
             ShowInventory();
@@ -50,13 +51,13 @@ public class InventoryView : MonoBehaviour
 
     public void ShrinkInventory()
     {
-        animator.Play("Shrink");
+        animator.SetTrigger(Shrink);
         _isVisible = false;
     }
 
     public void ShowInventory()
     {
-        animator.Play("Expand");
+        animator.SetTrigger(Expand);
         _isVisible = true;
     }
 }

@@ -153,17 +153,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_PointAction: {fileID: 1054132383583890850, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_MoveAction: {fileID: 3710738434707379630, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_SubmitAction: {fileID: 2064916234097673511, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_CancelAction: {fileID: 1101693063772113843, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_LeftClickAction: {fileID: 8056856818456041789, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_MiddleClickAction: {fileID: 3279352641294131588, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_RightClickAction: {fileID: 3837173908680883260, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 8079261006607409679, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: de8ae5c2ccbc1044d938e9c059c67563, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
   m_Actions: {fileID: -944628639613478452, guid: 2d90fffed2bc7f948872b3bb2971d82b, type: 3}
   m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 170885931}
+  m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: e3073f72-d533-4207-b293-c23569b52d42
+  m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &374885462
@@ -621,6 +621,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5919705276038152091, guid: 3ec48ba22a70c4a4abb75c8a1a5db41f, type: 3}
   m_PrefabInstance: {fileID: 663790409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &744968485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1446155548523540783, guid: 1bf02303794051c4ebb8636409832ee3, type: 3}
+  m_PrefabInstance: {fileID: 615638578}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &753884420
 GameObject:
@@ -1835,6 +1840,34 @@ PrefabInstance:
     - target: {fileID: 3774758469005467807, guid: 575d46ab8ab5e8d449ec559670ec644a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247872837992303595, guid: 575d46ab8ab5e8d449ec559670ec644a, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247872837992303595, guid: 575d46ab8ab5e8d449ec559670ec644a, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247872837992303595, guid: 575d46ab8ab5e8d449ec559670ec644a, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 744968485}
+    - target: {fileID: 4247872837992303595, guid: 575d46ab8ab5e8d449ec559670ec644a, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247872837992303595, guid: 575d46ab8ab5e8d449ec559670ec644a, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247872837992303595, guid: 575d46ab8ab5e8d449ec559670ec644a, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247872837992303595, guid: 575d46ab8ab5e8d449ec559670ec644a, type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

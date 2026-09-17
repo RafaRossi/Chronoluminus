@@ -11,71 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f61e95a-804b-46be-9de0-74970aa0d8cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Day System/StartDayGameAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Day System/StartDayGameAction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/ChoiceVerticalCross.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/ChoiceVerticalCross.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemActionAsset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemActionAsset.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemsAsset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/ItemsAsset.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/NoneItemActionAsset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/NoneItemActionAsset.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/StandardItemsAssets.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/StandardItemsAssets.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Visual Novel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Visual Novel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Dialogue Box View/Hide.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Dialogue Box View/Hide.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Expand.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Expand.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Hide.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Hide.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Idle.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Idle.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Interaction Panel.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Interaction Panel.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Show.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Show.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Shrink.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Interaction Panel/Shrink.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Transition/Simple Fade/Simple Fade.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Transition/Simple Fade/Simple Fade.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Basics_2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/main.ink" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ink/main.ink" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/main.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ink/main.json.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Input Actions/Input.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Actions/Input.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Knots/Player Bedroom/PlayerBedroom.ink" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Knots/Player Bedroom/PlayerBedroom.ink.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Knots/Player Bedroom/PlayerBedroom.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Knots/Player Bedroom/PlayerBedroom.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Scenario/M_tree 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Scenario/M_tree 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera - Perspective - Follow.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera - Perspective - Follow.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera - Perspective.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera - Perspective.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera - Perspective.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera/Main Camera - Perspective.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Day Controller.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Day Controller.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Main Dialogue Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dialogue/Main Dialogue Controller.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Inventory Controller.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Inventory Controller.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Side Scroll Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Side Scroll Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Scene Loader.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Scene Loader.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Transition Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Transition Controller.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Choice Box.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Choice Box.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Dialogue Box View.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Dialogue Box View.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Inventory/Inventory Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Inventory/Inventory Controller.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Player Room/Player Room.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Player Room/Player Room.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Actions/GameActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Actions/GameActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraRoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraRoomController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Commands/ICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Commands/ICommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Commands/InitializationQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Commands/InitializationQueue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Day System/DayController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Day System/DiscreteHourController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Day System/DayController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Day System/DiscreteHourController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/ChoiceView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/ChoiceView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueBoxView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueBoxView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueCommandsQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueCommandsQueue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue System/DialogueController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Initializer.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Initializer/GameBootstrapper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Initializer/GameBootstrapper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/InteractionCommandsQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/InteractionCommandsQueue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSideScrollController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerSideScrollController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/InventoryView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
