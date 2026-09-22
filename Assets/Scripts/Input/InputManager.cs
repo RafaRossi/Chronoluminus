@@ -14,9 +14,15 @@ public class InputManager : Singleton<InputManager>
     {
         playerInput.SwitchCurrentActionMap("Dialogue");
     }
-
-    public void EnableUI()
+    
+    public void EnableCutscene()
     {
-        playerInput.SwitchCurrentActionMap("UI");
+        playerInput.SwitchCurrentActionMap("Cutscene");
+    }
+    
+    public void EnableInventory()
+    {
+        playerInput.SwitchCurrentActionMap("Inventory");
+        
     }
 }

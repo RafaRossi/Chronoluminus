@@ -14,18 +14,26 @@ public abstract class ItemsAsset : ScriptableObject
     
     [field:SerializeField] public ItemActionAsset CancelActionAsset { get; private set; }
     
-    public abstract Item GenerateItem(ItemsAsset itemAsset);
+    public abstract Item GenerateItem();
 }
 
 public abstract class Item
 {
-    protected Item(IItemAction useAction, IItemAction examine, IItemAction combineAction, IItemAction cancelAction)
+    protected Item(ItemsAsset itemAsset)
     {
-        Use = useAction;
-        Examine = examine;
-        Combine = combineAction;
-        Cancel = cancelAction;
+        MaxStack = itemAsset.MaxStack;
+        ItemName = itemAsset.ItemName;
+        Icon = itemAsset.Icon;
+        
+        Use = itemAsset.UseActionAsset.Generate();
+        Examine = itemAsset.ExamineActionAsset.Generate();
+        Combine = itemAsset.CombineActionAsset.Generate();
+        Cancel = itemAsset.CancelActionAsset.Generate();
     }
+
+    public int MaxStack { get; }
+    public string ItemName { get; }
+    public Sprite Icon { get; }
     
     public IItemAction Use { get; }
     public IItemAction Examine { get; }

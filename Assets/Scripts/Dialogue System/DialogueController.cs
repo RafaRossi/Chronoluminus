@@ -59,8 +59,6 @@ namespace DialogueSystem
 
         public async void StartDialogueAt(string knotName)
         {
-            InputManager.Instance.EnableDialogue();
-            
             boxView.ApplyStyle(defaultStyle);
             boxView.Show();
             
@@ -72,8 +70,6 @@ namespace DialogueSystem
         {
             boxView.Close();
             OnDialogueEnded?.Invoke();
-            
-            InputManager.Instance.EnableGameplay();
         }
 
         public async Task ContinueStory()
@@ -107,8 +103,7 @@ namespace DialogueSystem
             else
             {
                 boxView.Hide();
-            
-                CommandsQueue.Enqueue(new CloseDialogueCommand());
+                GameManager.Instance.PopState();
             }
         }
 

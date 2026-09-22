@@ -5,13 +5,18 @@ public class StandardItemsAssets : ItemsAsset
 {
     [field:SerializeField] public string ItemExamineDescription { get; private set; } = "";
     
-    public override Item GenerateItem(ItemsAsset itemAsset)
+    public override Item GenerateItem()
     {
-        return new StandardItem(itemAsset);
+        return new StandardItem(this);
     }
     
     public class StandardItem : Item
     {
-        public StandardItem(ItemsAsset itemsAsset) : base(itemsAsset.UseActionAsset.Generate(), itemsAsset.ExamineActionAsset.Generate(), itemsAsset.CombineActionAsset.Generate(), itemsAsset.CancelActionAsset.Generate()) { }
+        public string ItemExamineDescription { get; }
+
+        public StandardItem(StandardItemsAssets itemsAsset) : base(itemsAsset)
+        {
+            ItemExamineDescription = itemsAsset.ItemExamineDescription;
+        }
     }
 }

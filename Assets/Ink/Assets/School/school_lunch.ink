@@ -11,9 +11,9 @@ Ei, {player_name}! Aqui!
 === school_init_cont ===
 ~speaker = friend_2_name
 {current_loop >= 2 : 
-    Ei... {player_name}, tá tudo bem? Sua cara está horrível.
+    {player_name}, meu Deus! Sua cara está horrível.
     ~speaker = friend_3_name
-    Não é culpa dele, ele só tem essa cara.
+    É a única que ele tem, dá um desconto.
     -> school_init_answer_options
 -else:
     Ei, {player_name} bem na hora.
@@ -24,10 +24,10 @@ Ei, {player_name}! Aqui!
 
 === school_init_answer_options
 ~speaker = player_name
-* {current_loop == 1}:
-    [Falar do Loop Temporal]
+* {current_loop == 1} [Falar do Loop Temporal]
         Pessoal, acho que estou preso num loop temporal.
         ->DONE
     *[Acalmar os ânimos]
         Quietos.
         -> DONE
+    ->DONE

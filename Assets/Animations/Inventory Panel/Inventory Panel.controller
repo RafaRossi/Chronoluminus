@@ -252,7 +252,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Interaction Panel
+  m_Name: Inventory Panel
   serializedVersion: 6
   m_AnimatorParameters:
   - m_Name: Show

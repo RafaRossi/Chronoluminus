@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_InventoryPanel
+  m_Name: M_InventoryButton
   m_Shader: {fileID: 4800000, guid: 045cb135b8dd91b478bcf13bfc537a62, type: 3}
   m_Parent: {fileID: 2100000, guid: 69eb350594216394096dffdc88163f19, type: 2}
   m_ModifiedSerializedProperties: 0
@@ -25,10 +25,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _WobbleAmplitude: 0.0004
-    - _WobbleAxisMix: 0.547
-    - _WobbleFrequency: 0.002
-    - _WobbleSpeed: 3.37
+    - _WobbleAmplitude: 0.0009
+    - _WobbleFrequency: 0.001
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

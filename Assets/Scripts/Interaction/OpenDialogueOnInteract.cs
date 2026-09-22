@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using Commands;
-using DialogueSystem;
 using UnityEngine;
 
 namespace Interaction
@@ -27,7 +26,7 @@ namespace Interaction
             
             public Task Execute(ICommandContext context)
             {
-                DialogueController.CommandsQueue.Enqueue(new OpenDialogueCommand(_knotName));
+                GameManager.Instance.PushState(new Dialogue(_knotName));
                 
                 return Task.CompletedTask;
             }

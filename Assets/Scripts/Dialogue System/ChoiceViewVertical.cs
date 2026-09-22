@@ -39,7 +39,7 @@ namespace DialogueSystem
                 choiceButtons[i].Setup(choices[i].text, () => Select(index));
             }
             
-            EventSystem.current.SetSelectedGameObject(defaultSelectedObject.gameObject);
+            EventSystem.current.SetSelectedGameObject(choiceButtons[0].gameObject);
             return tcs.Task;
         }
     }

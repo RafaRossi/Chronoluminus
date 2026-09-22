@@ -4,6 +4,7 @@ using Ink.Runtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace DialogueSystem
 {
@@ -11,6 +12,8 @@ namespace DialogueSystem
     {
         [SerializeField] private TMP_Text promptText;
         [SerializeField] private ChoiceButton upButton, rightButton, downButton, leftButton;
+        
+        [SerializeField] protected Selectable defaultSelectedObject;
         
         public override Task<int> ShowChoices(List<Choice> choices)
         {

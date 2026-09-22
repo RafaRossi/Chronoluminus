@@ -9,7 +9,8 @@ namespace DialogueSystem
     public abstract class ChoiceView : MonoBehaviour
     {
         [SerializeField] protected GameObject root;
-        [SerializeField] protected Selectable defaultSelectedObject;
+        
+        private Selectable _lastSelectedObject;
         
         protected TaskCompletionSource<int> tcs;
 

@@ -1,5 +1,5 @@
 VAR current_hour = 9
-VAR current_loop = 0
+VAR current_loop = 1
 
 VAR speaker = ""
 

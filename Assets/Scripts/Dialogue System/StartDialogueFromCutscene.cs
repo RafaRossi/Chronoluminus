@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class StartDialogueFromCutscene : MonoBehaviour
 {
+    [SerializeField] private CutsceneController cutsceneController;
     public async void StartDialogue(string knot)
     {
-        CutsceneController.Instance.PauseCutscene();
+        //cutsceneController.PauseCutscene();
         
         await WaitForDialogueToEndAsync(knot);
 
-        CutsceneController.Instance.StartOrResumeCutscene();
+        //cutsceneController.StartOrResumeCutscene();
+        //GameManager.Instance.PushState(new Cutscene(cutsceneController));
     }
 
     private Task WaitForDialogueToEndAsync(string knot)
@@ -24,7 +26,7 @@ public class StartDialogueFromCutscene : MonoBehaviour
         }
 
         DialogueController.Instance.OnDialogueEnded += OnDialogueEnded;
-        DialogueController.Instance.StartDialogueAt(knot);
+        GameManager.Instance.PushState(new Dialogue(knot));
 
         return tcs.Task;
     }
