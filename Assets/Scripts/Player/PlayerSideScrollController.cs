@@ -29,6 +29,8 @@ public class PlayerSideScrollController : MonoBehaviour
     [SerializeField] private Animator animator;
 
     private float _currentSpeedX;
+    private float _currentSpeedY;
+    
     private float _verticalVelocity;
     private int _facingSign = 1;
 
@@ -40,20 +42,29 @@ public class PlayerSideScrollController : MonoBehaviour
 
     private void Update()
     {
-        float moveInput = GetMoveInputX();
+        float moveInputX = GetMoveInputX();
+        float moveInputY = GetMoveInputY();
 
-        float targetSpeed = moveInput * moveSpeed;
-        _currentSpeedX = Mathf.MoveTowards(_currentSpeedX, targetSpeed, acceleration * Time.deltaTime);
+        float targetSpeedX = moveInputX * moveSpeed;
+        float targetSpeedY = moveInputY * moveSpeed;
+        
+        _currentSpeedX = Mathf.MoveTowards(_currentSpeedX, targetSpeedX, acceleration * Time.deltaTime);
+        _currentSpeedY = Mathf.MoveTowards(_currentSpeedY, targetSpeedY, acceleration * Time.deltaTime);
 
-        UpdateFacing(moveInput);
+        UpdateFacing(moveInputX);
         UpdateAnimator();
 
-        Move(_currentSpeedX);
+        Move(_currentSpeedX, _currentSpeedY);
     }
 
     private float GetMoveInputX()
     {
         return moveActionReference.action.ReadValue<Vector2>().x;
+    }
+    
+    private float GetMoveInputY()
+    {
+        return moveActionReference.action.ReadValue<Vector2>().y;
     }
 
     private void UpdateFacing(float moveInput)
@@ -78,9 +89,9 @@ public class PlayerSideScrollController : MonoBehaviour
         animator.SetFloat(Speed, normalizedSpeed);
     }
 
-    private void Move(float speedX)
+    private void Move(float speedX, float speedY)
     {
-        Vector3 motion = Vector3.right * speedX;
+        Vector3 motion = ((Vector3.right * speedX) + (Vector3.forward * speedY));
 
         if (controller.isGrounded && _verticalVelocity < 0f)
         {

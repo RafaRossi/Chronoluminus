@@ -48,8 +48,10 @@ Shader "Custom/URP/Billboard_Sprite"
             TEXTURE2D(_BaseMap);
             SAMPLER(sampler_BaseMap);
 
+            // _BaseMap_ST removido do CBUFFER: o 2D SRP Batcher não suporta
+            // propriedades _ST/_TexelSize no material (comportamento "by design"
+            // da Unity), então TRANSFORM_TEX foi trocado por passagem direta de UV.
             CBUFFER_START(UnityPerMaterial)
-                float4 _BaseMap_ST;
                 float4 _BaseColor;
             CBUFFER_END
 
@@ -83,7 +85,7 @@ Shader "Custom/URP/Billboard_Sprite"
                     output.positionCS = mul(UNITY_MATRIX_P, float4(viewPos, 1.0));
                 #endif
 
-                output.uv = TRANSFORM_TEX(input.uv, _BaseMap);
+                output.uv = input.uv; // sem TRANSFORM_TEX / _BaseMap_ST
                 output.color = input.color * _BaseColor;
 
                 return output;
