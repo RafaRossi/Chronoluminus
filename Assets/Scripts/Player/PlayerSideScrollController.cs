@@ -29,7 +29,7 @@ public class PlayerSideScrollController : MonoBehaviour
     [SerializeField] private Animator animator;
 
     private float _currentSpeedX;
-    private float _currentSpeedY;
+    private float _currentSpeedZ;
     
     private float _verticalVelocity;
     private int _facingSign = 1;
@@ -38,23 +38,21 @@ public class PlayerSideScrollController : MonoBehaviour
     {
         if (spriteRoot == null) spriteRoot = transform;
     }
-    
 
     private void Update()
     {
-        float moveInputX = GetMoveInputX();
-        float moveInputY = GetMoveInputY();
+        Vector2 clampedInput = Vector2.ClampMagnitude(moveActionReference.action.ReadValue<Vector2>(), 1f);
 
-        float targetSpeedX = moveInputX * moveSpeed;
-        float targetSpeedY = moveInputY * moveSpeed;
+        float targetSpeedX = clampedInput.x * moveSpeed;
+        float targetSpeedY = clampedInput.y * moveSpeed;
         
         _currentSpeedX = Mathf.MoveTowards(_currentSpeedX, targetSpeedX, acceleration * Time.deltaTime);
-        _currentSpeedY = Mathf.MoveTowards(_currentSpeedY, targetSpeedY, acceleration * Time.deltaTime);
+        _currentSpeedZ = Mathf.MoveTowards(_currentSpeedZ, targetSpeedY, acceleration * Time.deltaTime);
 
-        UpdateFacing(moveInputX);
+        UpdateFacing(clampedInput.x);
         UpdateAnimator();
 
-        Move(_currentSpeedX, _currentSpeedY);
+        Move(_currentSpeedX, _currentSpeedZ);
     }
 
     private float GetMoveInputX()
