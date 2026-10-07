@@ -34,4 +34,9 @@ public class CutsceneController : MonoBehaviour
         director.Evaluate();
         director.Stop();
     }
+
+    public void SetNextCutsceneAsset(PlayableAsset playableAsset)
+    {
+        director.playableAsset = playableAsset;
+    }
 }

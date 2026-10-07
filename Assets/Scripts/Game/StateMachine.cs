@@ -6,6 +6,12 @@ public abstract class StateMachine<T> where T : class, IState
     
     public T CurrentState => _stateStack.Count > 0 ? _stateStack.Peek() : null;
 
+    public StateMachine(T initialState)
+    {
+        _stateStack.Push(initialState);
+        initialState.Enter();
+    }
+
     public void ChangeState(T newState)
     {
         while (_stateStack.Count > 0)

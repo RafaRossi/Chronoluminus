@@ -6,13 +6,7 @@ using UnityEngine.Events;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private UnityEvent initialGameEvent;
-    public GameStateMachine GameStateMachine { get; private set; } = new();
-
-    protected override void Awake()
-    {
-        GameStateMachine = new GameStateMachine();
-        ChangeState(new InGame());
-    }
+    public GameStateMachine GameStateMachine { get; private set; } = new(new InGame());
 
     private void Start()
     {

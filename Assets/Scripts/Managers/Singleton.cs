@@ -20,13 +20,8 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             {
                 if (_instance == null)
                 {
-                    _instance = FindAnyObjectByType<T>();
-
-                    if (_instance == null)
-                    {
-                        var singletonObject = new GameObject($"[Singleton] {typeof(T).Name}");
-                        _instance = singletonObject.AddComponent<T>();
-                    }
+                    var singletonObject = new GameObject($"[Singleton] {typeof(T).Name}");
+                    _instance = singletonObject.AddComponent<T>();
                 }
 
                 return _instance;

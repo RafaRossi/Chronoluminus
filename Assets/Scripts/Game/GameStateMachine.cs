@@ -1,9 +1,10 @@
 ﻿using DialogueSystem;
-using UnityEngine.Playables;
 
 public class GameStateMachine : StateMachine<IGameState>
 {
-    
+    public GameStateMachine(IGameState initialState) : base(initialState)
+    {
+    }
 }
 
 public interface IGameState : IState { }
@@ -55,6 +56,34 @@ public class Inventory : IGameState
     public void Resume()
     {
         InputManager.Instance.EnableInventory();
+    }
+}
+
+public class Battle : IGameState
+{
+    public void Enter()
+    {
+        InputManager.Instance.EnableBattle();
+    }
+
+    public void Tick()
+    {
+        
+    }
+
+    public void Exit()
+    {
+        
+    }
+
+    public void Pause()
+    {
+        
+    }
+
+    public void Resume()
+    {
+        InputManager.Instance.EnableBattle();
     }
 }
 

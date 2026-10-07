@@ -23,6 +23,10 @@ public class InputManager : Singleton<InputManager>
     public void EnableInventory()
     {
         playerInput.SwitchCurrentActionMap("Inventory");
-        
+    }
+
+    public void EnableBattle()
+    {
+        playerInput.SwitchCurrentActionMap("Battle");
     }
 }
