@@ -53,14 +53,6 @@ public class BattleStartTurnState : BattleState
 
     public override void Enter()
     {
-        if (!battleManager.CurrentRound.NextTurn())
-        {
-            BattleEvents.RoundEnded?.Invoke(battleManager.CurrentRound);
-            
-            battleManager.ChangeState(new BattleStartRoundState(battleManager));
-            return;
-        }
-
         var turn = battleManager.CurrentRound.CurrentTurn;
 
         if (!turn.Unit.IsAlive)
@@ -120,11 +112,20 @@ public class BattleEndTurnState : BattleState
         
         await Task.Delay(AwaitTime);
         
-        var result = battleManager.GetVictoryState();
+        /*var result = battleManager.GetVictoryState();
 
         battleManager.ChangeState(result == VictoryState.None
             ? new BattleStartTurnState(battleManager)
-            : new BattleEndState(battleManager, result));
+            : new BattleEndState(battleManager, result));*/
+
+        if (battleManager.CurrentRound.NextTurn())
+        {
+            battleManager.ChangeState(new BattleStartTurnState(battleManager));
+            return;
+        }
+        
+        BattleEvents.RoundEnded?.Invoke(battleManager.CurrentRound);
+        battleManager.ChangeState(new BattleStartRoundState(battleManager));
     }
 }
 

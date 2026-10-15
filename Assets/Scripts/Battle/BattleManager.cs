@@ -82,6 +82,11 @@ public class BattleManager : Singleton<BattleManager>
         BattleEvents.RoundStarted?.Invoke(CurrentRound);
     }
 
+    public void AddAdditionalTurnToCurrentRound(BattleTurn turn)
+    {
+        CurrentRound.AddAdditionalTurn(turn);
+    }
+
     public VictoryState GetVictoryState()
     {
         var playerAlive = playerUnits.Any(u => u.IsAlive);
@@ -127,6 +132,9 @@ public static class BattleEvents
 
     public static UnityAction<BattleRound> RoundStarted;
     public static UnityAction<BattleRound> RoundEnded;
+
+    public static UnityAction OnTurnsUpdate;
+    public static UnityAction<BattleTurn> OnTurnDisabled;
 
     public static UnityAction<StatChangedData> OnStatChanged;
 

@@ -4,6 +4,8 @@
 public class BattleUnitAsset : ScriptableObject
 {
     [SerializeField] private string displayName;
+    [SerializeField] private Sprite unitIcon;
+    
     [SerializeField] private UnitStats baseStats;
     
     [SerializeField] private InitiativeCalculatorStrategy initiativeCalculatorStrategy;
@@ -11,6 +13,6 @@ public class BattleUnitAsset : ScriptableObject
     public UnitData GenerateUnitData(BattleUnit unit)
     {
         var unitStats = new UnitStats(unit, baseStats.Vigor.Value, baseStats.Power.Value, baseStats.Intelligence.Value, baseStats.Speed.Value);
-        return new UnitData(displayName, unitStats, initiativeCalculatorStrategy.GenerateInitiativeCalculator(unitStats));
+        return new UnitData(displayName, unitIcon, unitStats, initiativeCalculatorStrategy.GenerateInitiativeCalculator(unitStats));
     }
 }

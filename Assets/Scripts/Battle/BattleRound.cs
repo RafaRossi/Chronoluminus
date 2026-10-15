@@ -1,47 +1,49 @@
 using System.Collections.Generic;
-using UnityEngine;
 
-public class BattleRound 
+public class BattleRound
 {
-    private readonly Queue<BattleTurn> _battleTurns = new();
-    
-    public BattleTurn CurrentTurn { get; private set; }
-    
-    public int RoundNumber { get; private set; }
-    
-    public BattleRound(int roundNumber, Queue<BattleTurn> battleTurns, Queue<BattleTurn> bonusTurns)
+    private readonly List<BattleTurn> _turns = new();
+    private int _currentIndex = 0;
+
+    public int RoundNumber { get; }
+    public int CurrentIndex => _currentIndex;
+    public IReadOnlyList<BattleTurn> Turns => _turns;
+
+    public BattleTurn CurrentTurn =>
+        _currentIndex >= 0 && _currentIndex < _turns.Count ? _turns[_currentIndex] : null;
+
+    public BattleRound(int roundNumber, IEnumerable<BattleTurn> battleTurns, IEnumerable<BattleTurn> bonusTurns)
     {
         RoundNumber = roundNumber;
-        
-        foreach (var turn in battleTurns)
-        {
-            _battleTurns.Enqueue(turn);
-        }
-
-        foreach (var bonusTurn in bonusTurns)
-        {
-            _battleTurns.Enqueue(bonusTurn);
-        }
+        _turns.AddRange(battleTurns);
+        _turns.AddRange(bonusTurns);
     }
-
+    
     public bool NextTurn()
     {
-        while (true)
+        while (_currentIndex < _turns.Count)
         {
-            if (_battleTurns.TryDequeue(out var battleTurn))
-            {
-                if (battleTurn.IsTurnActive)
-                {
-                    CurrentTurn = battleTurn;
-                    return true;
-                }
-
-                continue;
-            }
-
-            break;
+            _currentIndex++;
+            if (_currentIndex < _turns.Count && _turns[_currentIndex].Unit.IsAlive) return true;
         }
-
         return false;
+    }
+
+    public void AddAdditionalTurn(BattleTurn turn)
+    {
+        _turns.Add(turn);
+        BattleEvents.OnTurnsUpdate?.Invoke();
+    }
+
+    public void InsertAdditionalTurn(BattleTurn turn, int index)
+    {
+        _turns.Insert(index, turn);
+        BattleEvents.OnTurnsUpdate?.Invoke();
+    }
+
+    public void DisableTurn(BattleTurn turn)
+    {
+        turn.DisableTurn();
+        BattleEvents.OnTurnsUpdate?.Invoke();
     }
 }

@@ -65,7 +65,7 @@ public class BattleUnit : MonoBehaviour
 [Serializable]
 public class UnitData
 {
-    public UnitData(string unitDisplayName, UnitStats unitBaseStats, IInitiativeCalculator initiativeCalculator)
+    public UnitData(string unitDisplayName, Sprite unitIcon, UnitStats unitBaseStats, IInitiativeCalculator initiativeCalculator)
     {
         UnitDisplayName = unitDisplayName;
         
@@ -74,6 +74,7 @@ public class UnitData
     }
     
     public string UnitDisplayName { get; private set; }
+    public Sprite UnitIcon { get; private set; }
     public UnitStats UnitBaseStats { get; private set; }
 
     public Stat CurrentVigor => UnitBaseStats.Vigor;

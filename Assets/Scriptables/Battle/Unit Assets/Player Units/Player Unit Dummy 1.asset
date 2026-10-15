@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Player Unit Dummy 1
   m_EditorClassIdentifier: Assembly-CSharp::BattleUnitAsset
   displayName: Player Dummy 1
+  unitIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   initiativeCalculatorStrategy: {fileID: 11400000, guid: 227e26a177931404397738fb96cfc90a, type: 2}

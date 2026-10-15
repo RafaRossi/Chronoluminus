@@ -11,27 +11,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f61e95a-804b-46be-9de0-74970aa0d8cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleDamage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleDamage.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleUnitAsset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleUnitAsset.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/InitiativeCalculatorBySpeed.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/InitiativeCalculatorBySpeed.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/InitiativeCalculatorStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/InitiativeCalculatorStrategy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/StatModifierAsset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/StatModifierAsset.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Visual Novel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Visual Novel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input Actions/Input.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input Actions/Input.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sprites/M_BillboardSprite.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sprites/M_BillboardSprite.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cutscene/Cutscene Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cutscene/Cutscene Controller.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cutscenes/CutsceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cutscenes/CutsceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/StateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Input/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Singleton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Battle/Battle HUD/Hide Player HUD.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Battle/Battle HUD/Hide Player HUD.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Battle/Battle HUD/Show Player HUD.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Battle/Battle HUD/Show Player HUD.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/UI_Battle_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/UI_Battle_1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-SemiBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/static/Outfit-SemiBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Battle/Battle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Battle/Battle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Opponent Units/Opponent Unit Dummy 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Opponent Units/Opponent Unit Dummy 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Opponent Units/Opponent Unit Dummy 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Opponent Units/Opponent Unit Dummy 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Opponent Units/Opponent Unit Dummy 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Opponent Units/Opponent Unit Dummy 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Player Units/Player Unit Dummy 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Player Units/Player Unit Dummy 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Player Units/Player Unit Dummy 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Player Units/Player Unit Dummy 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Player Units/Player Unit Dummy 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptables/Battle/Unit Assets/Player Units/Player Unit Dummy 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleCutsceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleCutsceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleHUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleRound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleRound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleTurn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleTurn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleUnitAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Battle/BattleUnitAsset.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,10 +143,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="9824">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="29812">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="9824" />
+      <option name="pid" value="29812" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -220,19 +219,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Battle/BattleStateMachine.cs</url>
-          <line>134</line>
-          <properties documentPath="D:\Projetos\Visual Novel\Assets\Scripts\Battle\BattleStateMachine.cs" containingFunctionPresentation="Constructor 'BattleEndState'">
-            <startOffsets>
-              <option value="3602" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3606" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

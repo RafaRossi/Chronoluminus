@@ -1,4 +1,4 @@
-using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,12 +9,17 @@ public class BattleHUD : MonoBehaviour
     [SerializeField] private Animator playerHUDAnimator;
     [SerializeField] private Button endTurnButton;
 
+    [SerializeField] private TMP_Text unitName;
+    [SerializeField] private Image unitIcon;
+
     private void OnEnable()
     {
         endTurnButton.onClick.AddListener(battleManager.EndTurn);
 
         BattleEvents.OnPlayerTurnStarted += ShowPlayerHUD;
         BattleEvents.OnPlayerTurnEnded += HidePlayerHUD;
+        
+        BattleEvents.TurnStarted += UpdatePlayerInfo;
     }
 
     private void OnDisable()
@@ -23,6 +28,8 @@ public class BattleHUD : MonoBehaviour
         
         BattleEvents.OnPlayerTurnStarted -= ShowPlayerHUD;
         BattleEvents.OnPlayerTurnEnded -= HidePlayerHUD;
+        
+        BattleEvents.TurnStarted -= UpdatePlayerInfo;
     }
 
     private void ShowPlayerHUD()
@@ -33,5 +40,11 @@ public class BattleHUD : MonoBehaviour
     private void HidePlayerHUD()
     {
         playerHUDAnimator.Play("Hide Player HUD");
+    }
+    
+    private void UpdatePlayerInfo(BattleTurn turn)
+    {
+        unitName.text = turn.Unit.UnitData.UnitDisplayName;
+        unitIcon.sprite = turn.Unit.UnitData.UnitIcon;
     }
 }
